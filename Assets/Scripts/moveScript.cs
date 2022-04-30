@@ -7,7 +7,7 @@ public class moveScript : MonoBehaviour
 
     public Transform targetLeft;
     public Transform targetRight;
-    public float speed = 100;
+    public float speed = 0.05f;
     // Start is called before the first frame update
     void Start()
     {
