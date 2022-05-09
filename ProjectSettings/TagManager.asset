@@ -8,6 +8,7 @@ TagManager:
   - Destroy
   - player
   - manager
+  - Manager
   layers:
   - Default
   - TransparentFX

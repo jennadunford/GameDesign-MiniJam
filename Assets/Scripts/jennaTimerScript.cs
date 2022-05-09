@@ -23,9 +23,11 @@ public class jennaTimerScript : MonoBehaviour
     {
         if (!gameEnd)
         {
-            rawTime += Time.deltaTime;
-            scoreCounter = ((int)rawTime) * 10;
+            //rawTime += Time.deltaTime;
+            //scoreCounter = ((int)rawTime) * 10;
+            scoreCounter +=(int)(Mathf.Ceil(Time.deltaTime));
             timerText.text = scoreCounter.ToString();
+            highScoreText.text = highScoreCount.ToString();
         }
             
         

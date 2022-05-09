@@ -7,10 +7,13 @@ public class jennaObstaclesScript : MonoBehaviour
     GameObject Manager;
     GameObject behaviourScript;
 
+
     // Start is called before the first frame update
     void Start()
     {
+
         Manager = GameObject.FindGameObjectWithTag("Manager");
+        gameObject.GetComponent<Rigidbody2D>().gravityScale = jennaObstacleBehaviourScript.gravityScale;
        
     }
 
