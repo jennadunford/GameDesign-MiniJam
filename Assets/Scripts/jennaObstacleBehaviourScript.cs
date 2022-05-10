@@ -10,6 +10,13 @@ public class jennaObstacleBehaviourScript : MonoBehaviour
     public static int gameTime;
     public float rawGameTime;
     public static int gravityScale = 1;
+    public SpriteRenderer playerSprite;
+    public Sprite faceImage;
+
+    public Button changeRed;
+    public Button changeGreen;
+    public Button ChangeFace;
+    public Button changeBlue;
 
     void Update()
     {
@@ -42,6 +49,10 @@ public class jennaObstacleBehaviourScript : MonoBehaviour
             
         }
         restart.gameObject.SetActive(true);
+        changeGreen.gameObject.SetActive(true);
+        changeBlue.gameObject.SetActive(true);
+        changeRed.gameObject.SetActive(true);
+        ChangeFace.gameObject.SetActive(true);
         
     }
 
@@ -67,5 +78,46 @@ public class jennaObstacleBehaviourScript : MonoBehaviour
         destroyAllObstacles();
         jennaTimerScript.gameEnd = false;
         restart.gameObject.SetActive(false);
+        restart.gameObject.SetActive(false);
+        changeGreen.gameObject.SetActive(false);
+        changeBlue.gameObject.SetActive(false);
+        changeRed.gameObject.SetActive(false);
+        ChangeFace.gameObject.SetActive(false);
+    }
+
+    public void changeColourBlue()
+    {
+        if(jennaMoveScript.coins >= 200)
+        {
+            jennaMoveScript.coins = jennaMoveScript.coins - 200;
+            playerSprite.color = Color.blue;
+        }
+    }
+
+    public void changeColourRed()
+    {
+        if (jennaMoveScript.coins >= 200)
+        {
+            jennaMoveScript.coins = jennaMoveScript.coins - 200;
+            playerSprite.color = Color.red;
+        }
+    }
+
+    public void changeColourGreen()
+    {
+        if (jennaMoveScript.coins >= 200)
+        {
+            jennaMoveScript.coins = jennaMoveScript.coins - 200;
+            playerSprite.color = Color.green;
+        }
+    }
+
+    public void changeToFace()
+    {
+        if (jennaMoveScript.coins >= 1000)
+        {
+            jennaMoveScript.coins = jennaMoveScript.coins - 1000;
+            playerSprite.sprite = faceImage;
+        }
     }
 }

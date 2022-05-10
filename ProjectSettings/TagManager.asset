@@ -9,6 +9,7 @@ TagManager:
   - player
   - manager
   - Manager
+  - coin
   layers:
   - Default
   - TransparentFX
